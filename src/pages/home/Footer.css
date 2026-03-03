@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap');
+
+:root {
+  --f-border: #E2DFDB;
+  --f-text-main: #111111;
+  --f-text-muted: #666666;
+  --f-text-light: #aaa;
+  --f-accent: #b2a18d; /* Luxury gold/beige accent */
+}
+
+.footer-container {
+  font-family: 'Inter', sans-serif;
+  border-top: 1px solid var(--f-border);
+  background: #ffffff;
+  padding: 80px 0 30px 0;
+  margin-top: 100px;
+}
+
+.footer-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Grid Layout */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 60px;
+  padding-bottom: 60px;
+}
+
+/* Brand styling */
+.logo-area {
+  margin-bottom: 25px;
+}
+
+.logo-main {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 52px;
+  font-weight: 500;
+  letter-spacing: 12px;
+  display: block;
+  line-height: 0.8;
+}
+
+.logo-tag {
+  font-size: 9px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--f-text-light);
+  margin-left: 2px;
+}
+
+.brand-text {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--f-text-muted);
+  max-width: 320px;
+  margin-bottom: 30px;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-links a {
+  color: var(--f-text-main);
+  transition: all 0.3s ease;
+  opacity: 0.7;
+}
+
+.social-links a:hover {
+  opacity: 1;
+  transform: translateY(-3px);
+  color: var(--f-accent);
+}
+
+/* Typography */
+.footer-h4 {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  color: var(--f-text-main);
+}
+
+.footer-ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-ul li a, 
+.footer-ul li span {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--f-text-muted);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-ul li a:hover {
+  color: var(--f-accent);
+}
+
+.phone-link {
+  font-weight: 500 !important;
+  color: var(--f-text-main) !important;
+}
+
+/* Trust Bar */
+.trust-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--f-border);
+  border-bottom: 1px solid var(--f-border);
+  padding: 40px 0;
+}
+
+.trust-card {
+  padding: 0 20px;
+  border-right: 1px solid var(--f-border);
+}
+
+.trust-card:last-child {
+  border-right: none;
+}
+
+.trust-card strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--f-text-main);
+}
+
+.trust-card span {
+  font-size: 12px;
+  color: var(--f-text-light);
+  line-height: 1.4;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.copyright {
+  font-size: 12px;
+  color: var(--f-text-light);
+}
+
+.legal-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.legal-links a {
+  font-size: 12px;
+  color: var(--f-text-light);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.legal-links a:hover {
+  color: var(--f-text-main);
+}
+
+.dot {
+  width: 3px;
+  height: 3px;
+  background: var(--f-border);
+  border-radius: 50%;
+}
+
+.payment-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.pay-tag {
+  font-size: 10px;
+  padding: 4px 10px;
+  border: 1px solid var(--f-border);
+  color: var(--f-text-light);
+  letter-spacing: 1px;
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .brand-col {
+    grid-column: 1 / -1;
+    margin-bottom: 30px;
+  }
+  .trust-bar {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  .trust-card:nth-child(2) {
+    border-right: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .trust-bar {
+    grid-template-columns: 1fr;
+  }
+  .trust-card {
+    border-right: none;
+    border-bottom: 1px solid var(--f-border);
+    padding: 20px 0;
+  }
+  .trust-card:last-child {
+    border-bottom: none;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
