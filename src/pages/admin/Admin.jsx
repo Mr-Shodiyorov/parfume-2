@@ -247,7 +247,7 @@ export default function Admin() {
       brand: draft.brand.trim(),
       gender: draft.gender,
       info: draft.info?.trim() || null,
-      release_date: yearVal || null,
+      release_date: yearVal ? `${yearVal}-01-01` : null,
       images: Array.isArray(draft.images) ? draft.images : [],
       prices: sanitizedPrices,
     };
